@@ -1,0 +1,447 @@
+/* === FONT (import di index.html) ===
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+*/
+
+body {
+  margin: 0;
+  padding: 20 20px; /* ⬅️ margin global kanan kiri */
+  font-family: 'Cormorant Garamond', serif;
+  background-color: whitesmoke;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* ==== GLOBAL EFFECTS ==== */
+.glow {
+  box-shadow: 0 0 12px #c8e6c9;
+  animation: glowing-border 2s infinite ease-in-out;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: scale(1.03);
+}
+
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 5px #c8e6c9, 0 0 10px #c8e6c9;
+    border-color: #c8e6c9;
+  }
+  50% {
+    box-shadow: 0 0 15px #a5d6a7, 0 0 25px #a5d6a7;
+    border-color: #a5d6a7;
+  }
+  100% {
+    box-shadow: 0 0 5px #c8e6c9, 0 0 10px #c8e6c9;
+    border-color: #c8e6c9;
+  }
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #02233d;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #02233d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #02233d;
+}
+
+/* ==== HERO ==== */
+.hero {
+  padding: 145px 145px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #00608f;
+}
+.hero h1 span {
+  color: #02233d;
+}
+.hero p {
+  font-size: 30px;
+  color: #004e7a;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ==== SECTION GENERAL ==== */
+.section {
+  padding: 100px 100px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.section h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+  color: #02233d;
+  position: relative;
+}
+.section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #02233d;
+  margin-top: 8px;
+}
+
+/* Alternating Colors */
+.green-dark {
+  background-color: whitesmoke;
+  border: 1px solid #00608f;
+}
+.green-light {
+  background-color: whitesmoke;
+}
+
+/* ==== ABOUT ==== */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.profile-img {
+  width: 220px;
+  height: 250px;
+  border-radius: 0px;
+  object-fit: cover;
+  border: 2px solid #00608f;
+}
+.about-text {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #02233d;
+}
+.about-text h2 {
+  font-size: 38px;
+  margin-bottom: 16px;
+  color: #02233d;
+}
+
+/* ==== EXPERIENCE ==== */
+.experience-section {
+  background-color: whitesmoke;
+  color: white;
+  padding: 40px 0px;
+  width: 100%;
+}
+.experience-section h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #02233d;
+}
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ⬅️ Maksimal 3 kolom */
+  gap: 30px;
+  width: 100%;
+  padding: 20 20px;
+  box-sizing: border-box;
+}
+
+.experience-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 30px;
+  width: 100%;
+  padding: 50 50px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .experience-grid-2 {
+    grid-template-columns: 1fr; /* jadi 1 kolom di HP */
+  }
+}
+
+.experience-card {
+  background-color: #02233d;
+  border-left: 5px solid #c8e6c9;
+  padding: 20px;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.experience-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #c8e6c9;
+}
+.experience-card h3 span {
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+  color: #e0f2f1;
+}
+.experience-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.experience-card li {
+  margin-bottom: 8px;
+}
+.experience-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+/* ==== SKILLS ==== */
+.skills-section {
+  padding: 40px 20px;
+  background-color: #02233d;
+  text-align: center;
+}
+.skills-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: scrollSkills 30s linear infinite;
+}
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.skill-icon-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.skill-icon {
+  max-height: 80px;
+  max-width: 80px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.skill-icon:hover {
+  filter: grayscale(0%);
+}
+
+/* ==== CERTIFICATES (UPDATED) ==== */
+.certificate-card {
+  background-color: #02233d;
+  border-left: 5px solid #c8e6c9;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-img {
+  width: 200%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #c8e6c9;
+}
+
+/* ✨ Hover: Blink hanya saat diarahkan */
+.certificate-card:hover {
+  animation: glowing-border 2s infinite ease-in-out;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card:hover .certificate-img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ✅ Glowing Border Animation */
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 5px #c8e6c9, 0 0 10px #c8e6c9;
+    border-color: #c8e6c9;
+  }
+  50% {
+    box-shadow: 0 0 15px #a5d6a7, 0 0 25px #a5d6a7;
+    border-color: #a5d6a7;
+  }
+  100% {
+    box-shadow: 0 0 5px #c8e6c9, 0 0 10px #c8e6c9;
+    border-color: #c8e6c9;
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cv-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.certificate-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ==== CONTACT & BUTTON ==== */
+.contact a {
+  color: #02233d;
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+.cv-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #c8e6c9;
+  color: #02233d;
+  padding: 0px 0px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  background-color: #02233d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0px;
+  font-size: 16px;
+  border-top: 1px solid #c8e6c9;
+}
+
+/* === CUSTOM BUTTON === */
+.custom-button {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #c8e6c9;
+  color: #0A400C;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover {
+  background-color: #a5d6a7;
+  color: #033a08;
+  transform: translateY(-2px);
+}
