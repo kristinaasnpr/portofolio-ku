@@ -72,12 +72,12 @@ function App() {
               link: "https://github.com/kristina/sentiment-analysis"
             },
                         {
-              image: assessPath("/projects/deepl.jpg"),
+              image: assetPath("/projects/deepl.jpg"),
               title: "Predictive App with Streamlit",
               link: "https://github.com/AnggitaGayatri/Copywriting-Otomatis-Produk-Fashion-Menggunakan-T5.git"
             },
             {
-              image: assessPath("/projects/dashboard.png"),
+              image: assetPath("/projects/dashboard.png"),
               title: "Personal Portfolio Website",
               link: "https://github.com/AnggitaGayatri/TB-Dashboard.git"
             }
@@ -98,42 +98,42 @@ function App() {
         <div className="experience-grid">
           {[
             {
-              image: assessPath("/certificates/tfdc.jpg"),
+              image: assetPath("/certificates/tfdc.jpg"),
               title: "Tensorflow Developer Certificate",
               link: "https://drive.google.com/file/d/1Sn0SYVVBgiYg1NPzgA18wWfY9AX0i-Il/view?usp=sharing",
             },
             {
-              image: assessPath("/certificates/bangkit.jpg"),
+              image: assetPath("/certificates/bangkit.jpg"),
               title: "Machine Learning Cohort ",
               link: "https://drive.google.com/file/d/1RBzP8Us5i6xk4z_y16g0i2ToQ1-J4cNY/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/cube.jpg"),
+              image: assetPath("/certificates/cube.jpg"),
               title: "Teacher Coding CUBE",
               link: "https://drive.google.com/file/d/1JwLzsGEE8ngSA6ViWf4p2vsptx-nM8ag/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/poster.jpg"),
+              image: assetPath("/certificates/poster.jpg"),
               title: "UI/UX Design – Coursera",
               link: "https://drive.google.com/file/d/1iZPsyW4hsgWAtmo7z1ZdxwatI79sa55M/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/CourseraData.jpg"),
+              image: assetPath("/certificates/CourseraData.jpg"),
               title: "Data Science – DQLab",
               link: "https://drive.google.com/file/d/1MTlmIz7Zcv7uoxCuwxYoE0c_1KRUKos8/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/CourseraMath.jpg"),
+              image: assetPath("/certificates/CourseraMath.jpg"),
               title: "Deep Learning – Kaggle",
               link: "https://drive.google.com/file/d/1aJYeifqhsaZzMUHfV-yNb1lf51lDQAzU/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/CourseraTfdev.jpg"),
+              image: assetPath("/certificates/CourseraTfdev.jpg"),
               title: "Database – Oracle Academy",
               link: "https://drive.google.com/file/d/1994vPFZYzbZvZbDYOLE1B0v2bL0ygXbz/view?usp=sharing"
             },
             {
-              image: assessPath("/certificates/CourseraML.jpg"),
+              image: assetPath("/certificates/CourseraML.jpg"),
               title: "Java Basics – Sololearn",
               link: "https://drive.google.com/file/d/1RVG0lcmu__uQ1kmh5FJ_dQ8pBfeypUVP/view?usp=sharing"
             }
