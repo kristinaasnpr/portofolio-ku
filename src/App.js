@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
-  const assetPath = (path) => `${process.env.PUBLIC_URL}${path}`;
+  const assetPath = (path) => `/portofolio-ku${path}`;
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
