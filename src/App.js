@@ -46,12 +46,12 @@ function App() {
 
       {/* About Me */}
       <section id="about" className="section green-light" data-aos="fade-up">
-        <div className="about-container">
-          <img src="/Foto Profile Kristina.jpeg" alt="Foto Kristina" className="profile-img" />
+        <div className="about-container">      
+          <img src={assetPath("/Foto Profile Kristina.jpeg")} alt="Foto Kristina" className="profile-img" />
           <div className="about-text">
             <h2>About Me</h2>
             <p>I am a fresh graduate of Information Technology at Udayana University with a strong interest in data and technology. I'm passionate about learning new things, especially in the ever-evolving world of tech. I've worked on various projects involving data processing, analysis, modeling, and mobile/web app development.</p>
-            <a href="/CV KRISTINA.pdf" download className="custom-button">📄 Download CV</a>
+            <a href={assetPath("/CV KRISTINA.pdf")} download className="custom-button">📄 Download CV</a>
           </div>
         </div>
       </section>
@@ -62,22 +62,22 @@ function App() {
         <div className="experience-grid">
           {[
             {
-              image: "/projects/scancare.jpg",
+              image: assetPath("/projects/scancare.jpg"),
               title: "TB Dashboard",
               link: "https://github.com/ScanCareApp/.github.git"
             },
             {
-              image: "/projects/sentimen.jpg",
+              image: assetPath("/projects/sentimen.jpg"),
               title: "Sentiment Analysis Saham",
               link: "https://github.com/kristina/sentiment-analysis"
             },
                         {
-              image: "/projects/deepl.jpg",
+              image: assessPath("/projects/deepl.jpg"),
               title: "Predictive App with Streamlit",
               link: "https://github.com/AnggitaGayatri/Copywriting-Otomatis-Produk-Fashion-Menggunakan-T5.git"
             },
             {
-              image: "/projects/dashboard.png",
+              image: assessPath("/projects/dashboard.png"),
               title: "Personal Portfolio Website",
               link: "https://github.com/AnggitaGayatri/TB-Dashboard.git"
             }
@@ -98,42 +98,42 @@ function App() {
         <div className="experience-grid">
           {[
             {
-              image: "/certificates/tfdc.jpg" ,
+              image: assessPath("/certificates/tfdc.jpg"),
               title: "Tensorflow Developer Certificate",
               link: "https://drive.google.com/file/d/1Sn0SYVVBgiYg1NPzgA18wWfY9AX0i-Il/view?usp=sharing",
             },
             {
-              image: "/certificates/bangkit.jpg",
+              image: assessPath("/certificates/bangkit.jpg"),
               title: "Machine Learning Cohort ",
               link: "https://drive.google.com/file/d/1RBzP8Us5i6xk4z_y16g0i2ToQ1-J4cNY/view?usp=sharing"
             },
             {
-              image: "/certificates/cube.jpg",
+              image: assessPath("/certificates/cube.jpg"),
               title: "Teacher Coding CUBE",
               link: "https://drive.google.com/file/d/1JwLzsGEE8ngSA6ViWf4p2vsptx-nM8ag/view?usp=sharing"
             },
             {
-              image: "/certificates/poster.jpg",
+              image: assessPath("/certificates/poster.jpg"),
               title: "UI/UX Design – Coursera",
               link: "https://drive.google.com/file/d/1iZPsyW4hsgWAtmo7z1ZdxwatI79sa55M/view?usp=sharing"
             },
             {
-              image: "/certificates/CourseraData.jpg",
+              image: assessPath("/certificates/CourseraData.jpg"),
               title: "Data Science – DQLab",
               link: "https://drive.google.com/file/d/1MTlmIz7Zcv7uoxCuwxYoE0c_1KRUKos8/view?usp=sharing"
             },
             {
-              image: "/certificates/CourseraMath.jpg",
+              image: assessPath("/certificates/CourseraMath.jpg"),
               title: "Deep Learning – Kaggle",
               link: "https://drive.google.com/file/d/1aJYeifqhsaZzMUHfV-yNb1lf51lDQAzU/view?usp=sharing"
             },
             {
-              image: "/certificates/CourseraTfdev.jpg",
+              image: assessPath("/certificates/CourseraTfdev.jpg"),
               title: "Database – Oracle Academy",
               link: "https://drive.google.com/file/d/1994vPFZYzbZvZbDYOLE1B0v2bL0ygXbz/view?usp=sharing"
             },
             {
-              image: "/certificates/CourseraML.jpg",
+              image: assessPath("/certificates/CourseraML.jpg"),
               title: "Java Basics – Sololearn",
               link: "https://drive.google.com/file/d/1RVG0lcmu__uQ1kmh5FJ_dQ8pBfeypUVP/view?usp=sharing"
             }
@@ -160,7 +160,7 @@ function App() {
               "gcp", "c", "excel", "mysql"
             ].map((tech, index) => (
               <div className="skill-icon-wrapper" key={index}>
-                <img src={`/icons/logo ${tech}.png`} alt={tech} className="skill-icon" />
+                <img src={assetPath(`/icons/logo ${tech}.png`)} alt={tech} className="skill-icon" />
               </div>
             ))}
             {/* Duplicate for seamless infinite scroll */}
@@ -170,7 +170,7 @@ function App() {
               "gcp", "c", "excel", "mysql"
             ].map((tech, index) => (
               <div className="skill-icon-wrapper" key={`dup-${index}`}>
-                <img src={`/icons/logo ${tech}.png`} alt={tech} className="skill-icon" />
+                <img src={assetPath(`/icons/logo ${tech}.png`)} alt={tech} className="skill-icon" />
               </div>
             ))}
           </div>
@@ -181,7 +181,7 @@ function App() {
         <h2>Experience</h2>
         <div className="experience-grid-2">
           <div className="experience-card">
-            <img src="/experience-bangkit.jpg" alt="Bangkit Academy" className="experience-img" />
+            <img src={assetPath("/experience-bangkit.jpg")} alt="Bangkit Academy" className="experience-img" />
             <h3>Machine Learning Cohort<br /><span>Bangkit Academy</span></h3>
             <p>📅 August 2023 – Januari 2024</p>
             <ul>
@@ -192,7 +192,7 @@ function App() {
           </div>
 
           <div className="experience-card">
-            <img src="/experience-cube.jpg" alt="Coding Teacher at CUBE" className="experience-img" />
+            <img src={assetPath("/experience-cube.jpg")} alt="Coding Teacher at CUBE" className="experience-img" />
             <h3>Coding Teacher<br /><span>CUBE</span></h3>
             <p>📅 July 2023 – November 2023</p>
             <ul>
