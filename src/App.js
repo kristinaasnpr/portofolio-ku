@@ -5,9 +5,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
+  const assetPath = (path) => `${process.env.PUBLIC_URL}${path}`;
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
 
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
