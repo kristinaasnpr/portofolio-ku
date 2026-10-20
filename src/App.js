@@ -128,19 +128,65 @@ function App() {
 
       {/* Hero */}
       <header className="hero green-dark">
+        <center>
         <div className="hero-content">
+          <p className="hero-greeting">HELLO, WELCOME TO MY PORTFOLIO</p>
+
           <h1>
             Hello, I'm <span>Kristina</span>
           </h1>
-          <p>Data Enthusiast | UI/UX Learner</p>
+
+          <p className="hero-description">
+            UI/UX Design | Data Enthusiast | Software QA Tester
+          </p>
+
+          <div className="hero-contact">
+            <a
+              href="mailto:kristinaasnprwork@gmail.com"
+              className="contact-card"
+              aria-label="Send me an email"
+            >
+              <span className="contact-icon email-icon">✉</span>
+              <span className="contact-label">Email</span>
+              <span className="contact-detail">Let's connect</span>
+            </a>
+
+            <a
+              href="https://github.com/kristinaasnpr"
+              target="_blank"
+              rel="noreferrer"
+              className="contact-card"
+              aria-label="Visit my GitHub profile"
+            >
+              <span className="contact-icon github-icon">GH</span>
+              <span className="contact-label">GitHub</span>
+              <span className="contact-detail">Explore my work</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/kristinaasnpr"
+              target="_blank"
+              rel="noreferrer"
+              className="contact-card"
+              aria-label="Visit my LinkedIn profile"
+            >
+              <span className="contact-icon linkedin-icon">in</span>
+              <span className="contact-label">LinkedIn</span>
+              <span className="contact-detail">Connect with me</span>
+            </a>
+          </div>
+
+          <a href="#about" className="hero-scroll">
+            Explore my portfolio <span>↓</span>
+          </a>
         </div>
+        </center>
       </header>
 
       {/* About Me */}
       <section
         id="about"
         className="section green-light"
-        data-aos="fade-up"
       >
         <div className="about-container">
           <img
@@ -174,15 +220,14 @@ function App() {
       {/* Projects */}
       <section
         id="projects"
-        className="experience-section"
-        data-aos="fade-up"
+        className="hero green-dark"
       >
         <h2>Projects</h2>
-
+        <center>
         <div className="experience-grid">
           {projects.map((project) => (
             <div
-              className="experience-card certificate-card"
+              className="contact-card"
               key={project.title}
             >
               <img
@@ -204,6 +249,7 @@ function App() {
             </div>
           ))}
         </div>
+        </center>
       </section>
 
       {/* Certificates */}
@@ -213,7 +259,7 @@ function App() {
         <div className="experience-grid">
           {certificates.map((cert) => (
             <div
-              className="experience-card certificate-card"
+              className="contact-card"
               key={cert.title}
             >
               <img
@@ -224,7 +270,7 @@ function App() {
                 style={{ cursor: "pointer" }}
               />
 
-              <h3>{cert.title}</h3>
+              <h3><center>{cert.title}</center></h3>
 
               <a
                 href={cert.link}
@@ -302,17 +348,18 @@ function App() {
         <h2>Experience</h2>
 
         <div className="experience-grid-2">
-          <div className="experience-card">
+          <div className="contact-card">
             <img
               src={assetPath("/experience-bangkit.jpg")}
               alt="Bangkit Academy"
               className="experience-img"
             />
 
-            <h3>
+            <h3><center>
               Machine Learning Cohort
               <br />
               <span>Bangkit Academy</span>
+              </center>
             </h3>
 
             <p>📅 August 2023 – Januari 2024</p>
@@ -327,17 +374,18 @@ function App() {
             </ul>
           </div>
 
-          <div className="experience-card">
+          <div className="contact-card">
             <img
               src={assetPath("/experience-cube.jpg")}
               alt="Coding Teacher at CUBE"
               className="experience-img"
             />
 
-            <h3>
+            <h3><center>
               Coding Teacher
               <br />
               <span>CUBE</span>
+              </center>
             </h3>
 
             <p>📅 July 2023 – November 2023</p>
@@ -354,43 +402,9 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Contact */}
-      <section
-        id="contact"
-        className="section green-dark"
-        data-aos="fade-up"
-      >
-        <h2>Contact</h2>
-
-        <p>Email: kristinaasnprwork@gmail.com</p>
-
-        <p>
-          LinkedIn:{" "}
-          <a
-            href="https://www.linkedin.com/in/kristinaasnpr"
-            target="_blank"
-            rel="noreferrer"
-          >
-            linkedin.com/in/kristinaasnpr
-          </a>
-        </p>
-
-        <p>
-          GitHub:{" "}
-          <a
-            href="https://github.com/kristinaasnpr"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/kristinaasnpr
-          </a>
-        </p>
-      </section>
-
       {/* Footer */}
       <footer className="footer">
-        <center>&copy; 2025 Kristina. Dibuat dengan 💚 React.js</center>
+        <center>&copy; Kristina</center>
       </footer>
     </div>
   );
