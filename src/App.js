@@ -1,23 +1,16 @@
 
-<<<<<<< HEAD
-import React, { useEffect } from "react";
-=======
 import React, { useEffect, useState } from "react";
->>>>>>> 0943911 (Membuat portfolio responsif)
 import "./App.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-<<<<<<< HEAD
-  // Menggunakan base URL dari package.json (homepage)
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  // Base path untuk GitHub Pages maupun local development
   const assetPath = (path) =>
     `${process.env.PUBLIC_URL || ""}${path}`;
-=======
-  // Base path untuk GitHub Pages
-  const assetPath = (path) => `${process.env.PUBLIC_URL}${path}`;
->>>>>>> 0943911 (Membuat portfolio responsif)
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -112,6 +105,7 @@ function App() {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo">Kristina's Portfolio</div>
+
           <ul className="nav-links">
             <li>
               <a href="#about">About</a>
@@ -154,10 +148,7 @@ function App() {
             alt="Foto Kristina"
             className="profile-img"
           />
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
           <div className="about-text">
             <h2>About Me</h2>
             <p>
@@ -165,16 +156,10 @@ function App() {
               University with a strong interest in data and technology. I'm
               passionate about learning new things, especially in the
               ever-evolving world of tech. I've worked on various projects
-<<<<<<< HEAD
               involving data processing, analysis, modeling, and mobile/web
               app development.
             </p>
-=======
-              involving data processing, analysis, modeling, and mobile/web app
-              development.
-            </p>
 
->>>>>>> 0943911 (Membuat portfolio responsif)
             <a
               href={assetPath("/CV KRISTINA.pdf")}
               download
@@ -195,28 +180,19 @@ function App() {
         <h2>Projects</h2>
 
         <div className="experience-grid">
-<<<<<<< HEAD
           {projects.map((project) => (
-            <div className="experience-card certificate-card" key={project.title}>
-=======
-          {projects.map((project, index) => (
             <div
               className="experience-card certificate-card"
-              key={index}
+              key={project.title}
             >
->>>>>>> 0943911 (Membuat portfolio responsif)
               <img
                 src={assetPath(project.image)}
                 alt={project.title}
                 className="certificate-img"
               />
-<<<<<<< HEAD
-              <h3>{project.title}</h3>
-=======
 
               <h3>{project.title}</h3>
 
->>>>>>> 0943911 (Membuat portfolio responsif)
               <a
                 href={project.link}
                 target="_blank"
@@ -235,31 +211,21 @@ function App() {
         <h2>Certificates</h2>
 
         <div className="experience-grid">
-<<<<<<< HEAD
           {certificates.map((cert) => (
-            <div className="experience-card certificate-card" key={cert.title}>
-=======
-          {certificates.map((cert, index) => (
             <div
               className="experience-card certificate-card"
-              key={index}
+              key={cert.title}
             >
->>>>>>> 0943911 (Membuat portfolio responsif)
               <img
                 src={assetPath(cert.image)}
                 alt={cert.title}
                 className="certificate-img"
-<<<<<<< HEAD
-              />
-              <h3>{cert.title}</h3>
-=======
                 onClick={() => setSelectedCertificate(cert.image)}
                 style={{ cursor: "pointer" }}
               />
 
               <h3>{cert.title}</h3>
 
->>>>>>> 0943911 (Membuat portfolio responsif)
               <a
                 href={cert.link}
                 target="_blank"
@@ -277,6 +243,7 @@ function App() {
           <div
             onClick={() => setSelectedCertificate(null)}
             role="button"
+            aria-label="Close certificate preview"
             tabIndex={0}
             onKeyDown={(event) => {
               if (event.key === "Escape" || event.key === "Enter") {
@@ -315,7 +282,10 @@ function App() {
         <div className="skills-slider">
           <div className="skills-track">
             {[...skills, ...skills].map((tech, index) => (
-              <div className="skill-icon-wrapper" key={`${tech}-${index}`}>
+              <div
+                className="skill-icon-wrapper"
+                key={`${tech}-${index}`}
+              >
                 <img
                   src={assetPath(`/icons/logo ${tech}.png`)}
                   alt={tech}
@@ -338,19 +308,13 @@ function App() {
               alt="Bangkit Academy"
               className="experience-img"
             />
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
             <h3>
               Machine Learning Cohort
               <br />
               <span>Bangkit Academy</span>
             </h3>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
             <p>📅 August 2023 – Januari 2024</p>
 
             <ul>
@@ -369,19 +333,13 @@ function App() {
               alt="Coding Teacher at CUBE"
               className="experience-img"
             />
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
             <h3>
               Coding Teacher
               <br />
               <span>CUBE</span>
             </h3>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
             <p>📅 July 2023 – November 2023</p>
 
             <ul>
@@ -404,11 +362,9 @@ function App() {
         data-aos="fade-up"
       >
         <h2>Contact</h2>
-        <p>Email: kristinaasnprwork@gmail.com</p>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
+        <p>Email: kristinaasnprwork@gmail.com</p>
+
         <p>
           LinkedIn:{" "}
           <a
@@ -419,10 +375,7 @@ function App() {
             linkedin.com/in/kristinaasnpr
           </a>
         </p>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0943911 (Membuat portfolio responsif)
         <p>
           GitHub:{" "}
           <a

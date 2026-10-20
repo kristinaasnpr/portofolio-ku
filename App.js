@@ -62,7 +62,7 @@ function App() {
       link: "https://drive.google.com/file/d/1Sn0SYVVBgiYg1NPzgA18wWfY9AX0i-Il/view?usp=sharing",
     },
     {
-      image: "/certificates/bangkit.jpg",
+      image: "/certificates/Bangkit.jpg",
       title: "Machine Learning Cohort",
       link: "https://drive.google.com/file/d/1RBzP8Us5i6xk4z_y16g0i2ToQ1-J4cNY/view?usp=sharing",
     },
