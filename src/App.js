@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import React, { useEffect } from "react";
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> 0943911 (Membuat portfolio responsif)
 import "./App.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
+<<<<<<< HEAD
   // Menggunakan base URL dari package.json (homepage)
   const assetPath = (path) =>
     `${process.env.PUBLIC_URL || ""}${path}`;
+=======
+  // Base path untuk GitHub Pages
+  const assetPath = (path) => `${process.env.PUBLIC_URL}${path}`;
+>>>>>>> 0943911 (Membuat portfolio responsif)
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -104,11 +113,21 @@ function App() {
         <div className="navbar-container">
           <div className="logo">Kristina's Portfolio</div>
           <ul className="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#certificates">Certificates</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -116,19 +135,29 @@ function App() {
       {/* Hero */}
       <header className="hero green-dark">
         <div className="hero-content">
-          <h1>Hello, I'm <span>Kristina</span></h1>
+          <h1>
+            Hello, I'm <span>Kristina</span>
+          </h1>
           <p>Data Enthusiast | UI/UX Learner</p>
         </div>
       </header>
 
       {/* About Me */}
-      <section id="about" className="section green-light" data-aos="fade-up">
+      <section
+        id="about"
+        className="section green-light"
+        data-aos="fade-up"
+      >
         <div className="about-container">
           <img
             src={assetPath("/Foto Profile Kristina.jpeg")}
             alt="Foto Kristina"
             className="profile-img"
           />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
           <div className="about-text">
             <h2>About Me</h2>
             <p>
@@ -136,9 +165,16 @@ function App() {
               University with a strong interest in data and technology. I'm
               passionate about learning new things, especially in the
               ever-evolving world of tech. I've worked on various projects
+<<<<<<< HEAD
               involving data processing, analysis, modeling, and mobile/web
               app development.
             </p>
+=======
+              involving data processing, analysis, modeling, and mobile/web app
+              development.
+            </p>
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
             <a
               href={assetPath("/CV KRISTINA.pdf")}
               download
@@ -151,17 +187,36 @@ function App() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="experience-section" data-aos="fade-up">
+      <section
+        id="projects"
+        className="experience-section"
+        data-aos="fade-up"
+      >
         <h2>Projects</h2>
+
         <div className="experience-grid">
+<<<<<<< HEAD
           {projects.map((project) => (
             <div className="experience-card certificate-card" key={project.title}>
+=======
+          {projects.map((project, index) => (
+            <div
+              className="experience-card certificate-card"
+              key={index}
+            >
+>>>>>>> 0943911 (Membuat portfolio responsif)
               <img
                 src={assetPath(project.image)}
                 alt={project.title}
                 className="certificate-img"
               />
+<<<<<<< HEAD
               <h3>{project.title}</h3>
+=======
+
+              <h3>{project.title}</h3>
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
               <a
                 href={project.link}
                 target="_blank"
@@ -178,15 +233,33 @@ function App() {
       {/* Certificates */}
       <section id="certificates" className="experience-section">
         <h2>Certificates</h2>
+
         <div className="experience-grid">
+<<<<<<< HEAD
           {certificates.map((cert) => (
             <div className="experience-card certificate-card" key={cert.title}>
+=======
+          {certificates.map((cert, index) => (
+            <div
+              className="experience-card certificate-card"
+              key={index}
+            >
+>>>>>>> 0943911 (Membuat portfolio responsif)
               <img
                 src={assetPath(cert.image)}
                 alt={cert.title}
                 className="certificate-img"
+<<<<<<< HEAD
               />
               <h3>{cert.title}</h3>
+=======
+                onClick={() => setSelectedCertificate(cert.image)}
+                style={{ cursor: "pointer" }}
+              />
+
+              <h3>{cert.title}</h3>
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
               <a
                 href={cert.link}
                 target="_blank"
@@ -198,11 +271,47 @@ function App() {
             </div>
           ))}
         </div>
+
+        {/* Certificate image preview */}
+        {selectedCertificate && (
+          <div
+            onClick={() => setSelectedCertificate(null)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === "Escape" || event.key === "Enter") {
+                setSelectedCertificate(null);
+              }
+            }}
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0, 0, 0, 0.85)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 9999,
+              padding: "20px",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src={assetPath(selectedCertificate)}
+              alt="Certificate preview"
+              style={{
+                maxWidth: "90%",
+                maxHeight: "90%",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        )}
       </section>
 
       {/* Skills */}
       <section id="skills" className="skills-section experience-section">
         <h2>Skills</h2>
+
         <div className="skills-slider">
           <div className="skills-track">
             {[...skills, ...skills].map((tech, index) => (
@@ -221,6 +330,7 @@ function App() {
       {/* Experience */}
       <section id="experience" className="experience-section">
         <h2>Experience</h2>
+
         <div className="experience-grid-2">
           <div className="experience-card">
             <img
@@ -228,14 +338,26 @@ function App() {
               alt="Bangkit Academy"
               className="experience-img"
             />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
             <h3>
               Machine Learning Cohort
               <br />
               <span>Bangkit Academy</span>
             </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
             <p>📅 August 2023 – Januari 2024</p>
+
             <ul>
-              <li>Gained in-depth knowledge in machine learning and data analysis.</li>
+              <li>
+                Gained in-depth knowledge in machine learning and data
+                analysis.
+              </li>
               <li>Top 50 out of 500+ teams in final project performance.</li>
               <li>Distinction Award (Top 10% of 4,500 participants).</li>
             </ul>
@@ -247,15 +369,28 @@ function App() {
               alt="Coding Teacher at CUBE"
               className="experience-img"
             />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
             <h3>
               Coding Teacher
               <br />
               <span>CUBE</span>
             </h3>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
             <p>📅 July 2023 – November 2023</p>
+
             <ul>
-              <li>Taught fundamental to advanced coding concepts to kids.</li>
-              <li>Mentored 12 students into Kids Programming competition.</li>
+              <li>
+                Taught fundamental to advanced coding concepts to kids.
+              </li>
+              <li>
+                Mentored 12 students into Kids Programming competition.
+              </li>
               <li>All students ranked in Top 100 nationally.</li>
             </ul>
           </div>
@@ -263,9 +398,17 @@ function App() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="section green-dark" data-aos="fade-up">
+      <section
+        id="contact"
+        className="section green-dark"
+        data-aos="fade-up"
+      >
         <h2>Contact</h2>
         <p>Email: kristinaasnprwork@gmail.com</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
         <p>
           LinkedIn:{" "}
           <a
@@ -276,6 +419,10 @@ function App() {
             linkedin.com/in/kristinaasnpr
           </a>
         </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0943911 (Membuat portfolio responsif)
         <p>
           GitHub:{" "}
           <a
